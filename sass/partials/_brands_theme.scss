@@ -1,0 +1,69 @@
+$brands:(
+  photoshop: (
+    bg-color: #06a0f0,
+    color: #002f5a,
+    shade: #069ef08d
+  ),
+  illustrator: (
+    bg-color: #f0b106,
+    color: #754800,
+    shade: #f0b20684
+  ),
+  indesign: (
+    bg-color: #a60046,
+    color: #ff64a5,
+    shade: #a6004586
+    
+  ),
+  lightroom: (
+    bg-color: #383c42,
+    color: #06a0f0,
+    shade: #383c4281
+  ),
+  css: (
+    bg-color: #007eff,
+    color: #ffffff,
+    shade: #0080ff77
+  ),
+  javascript: (
+    bg-color: #f0b106,
+    color: #000000,
+    shade: #f0b2069b
+  ),
+
+);
+
+
+@mixin brands($bg-color,$color,$shade){
+  background-color: $bg-color !important;
+  color: $color;
+  box-shadow: 0 0 20px 0 $shade;
+}
+
+$var1 : #fff;
+$var2 : #000;
+$var3 : #000;
+
+@each $brand , $colors in $brands {
+
+  @each $var , $value in $colors {
+    @if $var == bg-color{
+      $var1 : $value;
+    }
+    @if $var == color {
+      $var2 : $value;
+    }
+    @if $var == shade {
+      $var3 : $value;
+    }
+  }
+  .brand-#{$brand}{
+    @include brands($var1, $var2, $var3)
+  }
+}
+
+
+
+
+
+

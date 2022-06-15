@@ -1,0 +1,8 @@
+$border-radius-inner : .5rem;
+$border-radius-outer : 1.4rem;
+
+:root{
+  --main-border: #{$border-radius-outer};
+  --inner-border: #{$border-radius-inner};
+
+}

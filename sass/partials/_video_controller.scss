@@ -1,0 +1,136 @@
+.video-controller{
+  position: absolute;
+    width: 90%;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 10;
+
+  >.container{
+    width: 100%;
+    height: 100%;
+    color: var(--light-color);
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    gap: .5rem;
+    
+    transform: translateY(100px);
+
+    transition: all 0.5s;
+
+    .btn-side,.timeline-side{
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: .5rem;
+      padding: 5px 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn-side{
+      .play-pause{
+        width: 20px;
+        .play-btn,.pause-btn{
+          
+          cursor: pointer;
+          display: flex;
+          svg{
+            fill: var(--light-color);
+          }
+        }
+        
+        .play-btn{
+          display: none;
+        }
+      }
+
+      .volume{
+        cursor: pointer;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        display: flex;
+        width: 100%;
+        height: 4px;
+        transition: all 0.5s;
+        .volume-bar{
+          
+          position: absolute;
+          width: 50%;
+          height: 100%;
+          background-color: var(--main-color-90);
+          border-radius: 10px;
+          transition: all 0.5s;
+        }
+        .volume-handle{
+          
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          left: 50%;
+          bottom: 50%;
+          transform: translate(-50% , 50%);
+          border-radius: 50%;
+          background-color: var(--main-color);
+          box-shadow: 0 0 5px 0 #000;
+          transition: all 0.5s;
+        }
+      }
+    }
+    .timeline-side{
+      display: flex;
+      justify-content: space-between;
+      .timeline{
+        cursor: pointer;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        display: flex;
+        width: 100%;
+        height: 4px;
+        transition: all 0.5s;
+        .timeline-bar{
+          
+          position: absolute;
+          width: 50%;
+          height: 100%;
+          background-color: var(--main-color-90);
+          border-radius: 10px;
+          transition: all 0.5s;
+        }
+        .timeline-handle{
+          
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          left: 50%;
+          bottom: 50%;
+          transform: translate(-50% , 50%);
+          border-radius: 50%;
+          background-color: var(--main-color);
+          box-shadow: 0 0 5px 0 #000;
+          transition: all 0.5s;
+        }
+      }
+      .timecount{
+        font-size: 13px;
+        width: 60px;
+
+        @media (max-width: $x-small-width) {
+          font-size: 9px;
+        }
+      }
+    }
+  } 
+}
+
+.moveUp{
+  transform: translateY(0) !important;
+  transition: all 1s !important;
+}
+
+.moveDown{
+  transform: translateY(100px) !important;
+  transition: all 1s !important;
+}

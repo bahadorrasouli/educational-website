@@ -1,0 +1,207 @@
+.object-slider{
+  position: relative;
+  .container{
+    background-color: var(--light-color);
+    box-shadow: 0 0 3rem 0 #c9c9c9;
+    min-height: 4.75rem;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 2.5rem;
+    align-items: center;
+
+    overflow: hidden;
+
+    @media (max-width:$large-width) {
+      grid-template-columns: 5rem 1fr;   
+    }
+
+    @media (max-width:$medium-width) {
+      grid-template-columns: 1fr;   
+    }
+
+    @media (max-width:$medium-width) {
+      min-height: 4.25rem;
+      padding: .5rem 0; 
+    }
+
+    .title-side{
+      padding: 1rem;
+      @media (max-width:$medium-width) {
+        display: none;  
+      }
+      .title{
+        font-size: $normal-size; 
+        font-weight: 400;
+        color: var(--secondary-color);
+        @media (max-width:$large-width) {
+          font-size: $medium-size;   
+        }
+      }
+    }
+    .objects-side{
+      position: relative;
+      height: 100%;
+      width: 100%;
+      // background-color: rgb(135, 223, 58); //test
+      overflow: hidden;
+      .objects-container{
+        position: absolute;
+        height: 100%;
+        padding: .4rem 0;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: flex;
+        // background-color: salmon; //test
+        gap: 3.7rem;
+        
+        @media (max-width:$large-width) {
+          gap: 1.7rem;
+        }
+        // transition: all 1s ease-in-out;
+        .object{
+          position: relative;
+          width: 4.2rem;
+          height: 100%;
+          // aspect-ratio: 4.2/3.1;
+          
+          // background-color: var(--main-color); //test
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          justify-content: center;
+          align-items: center;
+
+          transition: all .5s;
+
+          @media (max-width:$medium-width) {
+            width: 3.2rem; 
+          }
+
+          .icon-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 3.1rem;
+            aspect-ratio: 4.2/3.1;
+            border-radius: var(--inner-border);
+            font-size: 1.3rem;
+            font-weight: 400;
+
+            background-color: var(--main-color);
+
+            transition: all 0.5s;
+
+            @media (max-width:$medium-width) {
+              font-size: 1rem; 
+            }
+          }
+
+          .title{
+            height: 0;
+            transform: scale(0);
+            // background-color: greenyellow; //test
+            font-size: .6rem;
+            color: var(--dark-color);
+            
+            transition: all .5s;
+          }
+
+          &:hover{
+            gap: .5rem;
+            .icon-box{
+              height: 2.5rem;
+              width: 3.38rem;
+              aspect-ratio: 4.2/3.1;
+
+              font-size: 1rem;
+            }
+            .title{
+              height: .8rem;
+              transform: scale(1);
+            }
+          }
+
+        }
+      }
+
+      &::after , &::before{
+        content: '';
+        position: absolute;
+        width: 2rem;
+        height: 100%;
+        z-index: 1;
+      }
+
+      &::after{
+        left: 0;
+        background: linear-gradient(to right, var(--light-color), transparent) ;
+      }
+      &::before{
+        right: 0;
+        background: linear-gradient(to left, var(--light-color), transparent) ;
+      }
+      
+    }
+  }
+
+  .arrows{
+    cursor: pointer;
+
+    @media (max-width: $small-width) {
+      display: none;
+    }
+    
+    &>*{
+      position: absolute;
+      width: 2.2rem;
+      height: 2.2rem;
+
+      border-radius: 50%;
+      background-color: var(--main-color);
+      // box-shadow: 0 0 1rem 0 var(--main-color);
+
+      z-index: 3;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width:$large-width) {
+        width: 1.9rem;
+        height: 1.9rem;   
+      }
+
+      .icon{
+        width: 50%;
+        fill: var(--light-color);
+      }
+    }
+    .arrow-right{
+      right: 0%;
+      top: 50%;
+      transform: translate(50%, -50%);
+      .icon{
+        transform: translateX(8%);
+      }
+    }
+    .arrow-left{
+      left: 9.5rem;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @media (max-width:$large-width) {
+        left: 7rem;   
+      }
+      @media (max-width:$medium-width) {
+        left: 0;  
+      }
+
+      .icon{
+        transform: translateX(-8%);
+      }
+    }
+  }
+}

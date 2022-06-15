@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.timer__countdown.model-2 {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 32px;
+}
+
+.timer__countdown.model-2 .big-item .value {
+  border-radius: 50%;
+  min-width: 1.2em;
+  min-height: 1.2em;
+  font-size: 5em;
+  font-weight: 900;
+  color: #fff !important;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.3) 5px 5px 20px;
+}
+
+.timer__countdown.model-2 .big-item .label {
+  display: none;
+}
+
+.timer__countdown.model-2 .small-item {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.timer__countdown.model-2 .small-item .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(73, 73, 73, 0.2);
+  padding: .15em .75em;
+  border-radius: 1em;
+}
+
+.timer__countdown.model-2 .small-item .container .item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(1.4em, auto) auto;
+      grid-template-columns: minmax(1.4em, auto) auto;
+  -ms-grid-rows: minmax(1.25em, 0.2em) minmax(0.4em, 0.2em);
+      grid-template-rows: minmax(1.25em, 0.2em) minmax(0.4em, 0.2em);
+}
+
+.timer__countdown.model-2 .small-item .container .item:last-child {
+  -ms-grid-columns: 1.4em;
+      grid-template-columns: 1.4em;
+}
+
+.timer__countdown.model-2 .small-item .container .item .value {
+  font-weight: 900;
+  font-size: 1em;
+  text-align: center;
+}
+
+.timer__countdown.model-2 .small-item .container .item .seprator {
+  margin: 0 5px;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+.timer__countdown.model-2 .small-item .container .item .label {
+  font-size: .3em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--gray-color);
+}
+
+.timer__countdown.model-2.main-color .value {
+  color: var(--main-color);
+}
+
+.timer__countdown.model-2.primary-color .value {
+  color: var(--primary-color);
+}
+
+.timer__countdown .progress {
+  background-color: red;
+  height: 100px;
+}
+
+.timer__countdown {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+.timer__countdown .model-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 32px;
+}
+
+.timer__countdown .model-1 .item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(1.4em, auto) auto;
+      grid-template-columns: minmax(1.4em, auto) auto;
+  -ms-grid-rows: minmax(1.25em, 0.2em) minmax(0.4em, 0.2em);
+      grid-template-rows: minmax(1.25em, 0.2em) minmax(0.4em, 0.2em);
+}
+
+.timer__countdown .model-1 .item:last-child {
+  -ms-grid-columns: minmax(1.4em, auto);
+      grid-template-columns: minmax(1.4em, auto);
+}
+
+.timer__countdown .model-1 .item .value {
+  font-weight: 900;
+  font-size: 1em;
+  text-align: center;
+}
+
+.timer__countdown .model-1 .item .seprator {
+  margin: 0 5px;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+.timer__countdown .model-1 .item .label {
+  font-size: .3em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--gray-color);
+}
+
+.timer__countdown .model-1 .zero .value, .timer__countdown .model-1 .zero .label {
+  font-weight: 300;
+}
+
+.timer__countdown.gradient .day .value {
+  background: -webkit-gradient(linear, left top, right top, from(var(--gradient-step-1)), to(var(--gradient-step-3)));
+  background: linear-gradient(to right, var(--gradient-step-1), var(--gradient-step-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timer__countdown.gradient .hour .value {
+  background: -webkit-gradient(linear, left top, right top, from(var(--gradient-step-3)), to(var(--gradient-step-5)));
+  background: linear-gradient(to right, var(--gradient-step-3), var(--gradient-step-5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timer__countdown.gradient .min .value {
+  background: -webkit-gradient(linear, left top, right top, from(var(--gradient-step-5)), to(var(--gradient-step-7)));
+  background: linear-gradient(to right, var(--gradient-step-5), var(--gradient-step-7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timer__countdown.gradient .sec .value {
+  background: -webkit-gradient(linear, left top, right top, from(var(--gradient-step-7)), to(var(--gradient-step-9)));
+  background: linear-gradient(to right, var(--gradient-step-7), var(--gradient-step-9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timer__countdown .main-color .value {
+  color: var(--main-color);
+}
+
+.timer__countdown .primary-color .value {
+  color: var(--primary-color);
+}
+
+.timer__countdown .light-color .value {
+  color: var(--light-color);
+  
+  text-shadow: -1px 1px rgba(0, 0, 0, 1);
+}
+
+.timer__countdown .light-color .seprator {
+  color: var(--light-color);
+  
+  text-shadow: -1px 1px rgba(0, 0, 0, 1);
+}
+.timer__countdown .light-color .label {
+  color: var(--light-color) !important;
+  
+  text-shadow: -1px 1px rgba(0, 0, 0, 1);
+}
+/*# sourceMappingURL=countdown_timer.css.map */

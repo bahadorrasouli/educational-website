@@ -1,0 +1,31 @@
+$main-color: #f0066e;
+$med-main-color: #ff90c2;
+$main-dark-color: #730033;
+$secondary-color : #4c0570;
+$light-color : #fff;
+$dark-color : #2f2f2f;
+$gray-color : #d3d3d3;
+$dark-gray-color : #929292;
+
+$main-color-50: #f0066f7c;
+$main-color-60: #f0066f98;
+$main-color-70: #f0066f9d;
+$main-color-80: #f0066fc7;
+$main-color-90: #f0066fea;
+
+:root{
+  --main-color: #{$main-color};
+  --med-main-color: #{$med-main-color};
+  --main-dark-color: #{$main-dark-color};
+  --secondary-color: #{$secondary-color};
+  --light-color: #{$light-color};
+  --dark-color: #{$dark-color};
+  --gray-color: #{$gray-color};
+  --dark-gray-color: #{$dark-gray-color};
+
+  --main-color-50: #{$main-color-50};
+  --main-color-60: #{$main-color-60};
+  --main-color-70: #{$main-color-70};
+  --main-color-80: #{$main-color-80};
+  --main-color-90: #{$main-color-90};
+}

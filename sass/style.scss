@@ -1,0 +1,108 @@
+@import './font/font';
+
+@import './variables/colors';
+@import './variables/materials';
+@import './variables/sizes';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+html{
+  font-size: 20px;
+  @media (max-width: 640px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.main-container{
+  width: $x-large-width;
+  margin: 0 auto;
+
+  @media (max-width: calc(#{$x-large-width} + 60px)) and (min-width: $x-large-width) {
+    width: calc(#{$x-large-width} - 60px);
+  }
+
+  @media (max-width: $x-large-width) and (min-width: $large-width) {
+    width: $large-width;
+  }
+
+  @media (max-width: calc(#{$large-width} + 60px)) and (min-width: $large-width) {
+    width: calc(#{$large-width} - 60px);
+  }
+
+  @media (max-width: $large-width) and (min-width: $medium-width) {
+    width: $medium-width;
+  }
+
+  @media (max-width: calc(#{$medium-width} + 60px)) and (min-width: $medium-width) {
+    width: calc(#{$medium-width} - 60px);
+  }
+
+  @media (max-width: $medium-width) {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+
+
+.box-model{
+  border-radius: 1.4rem;
+
+  .inner-box-model{
+    border-radius: .5rem;
+  }
+}
+
+.inner-box-model{
+  border-radius: .5rem;
+}
+
+.section-part{
+  margin-bottom: 2.75rem;
+}
+
+
+
+
+@import './partials/btns';
+
+@import './partials/main_header';
+@import './partials/main_footer';
+
+@import './partials/main_slider';
+@import './partials/object_slider';
+@import './partials/brands_theme';
+@import './partials/cards';
+@import './partials/info_section';
+@import './partials/video_gallery';
+@import './partials/video_controller';
+@import './partials/blog_slider';
+// @import './partials/advertising';
+@import './partials/event';
+
+
+
+

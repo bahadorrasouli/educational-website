@@ -1,0 +1,126 @@
+.event-part{
+  background-color: var(--dark-color);
+  position: relative;
+  overflow: hidden;
+  
+  >.container{
+    // background-color: salmon;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    color: var(--light-color);
+    z-index: 99;
+    .title{
+      color: var(--main-color);
+      font-size: $normal-size;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      z-index: 100;
+    }
+    .action-side{
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      z-index: 100;
+      @media (max-width: $medium-width) {
+        flex-direction: column;
+      }
+      .timer{
+        z-index: 100;
+      }
+      
+      .btn-book{
+        padding: .4rem 1rem;
+        display: inline-block;
+        background-color: var(--main-color);
+        position: relative;
+        color: var(--light-color);
+        overflow: hidden;
+        z-index: 100;
+        &::after{
+          content: '';
+          position: absolute;
+          width: 0%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.3);
+          top: 0;
+          left: 0;
+          transition: all 0.5s;
+          z-index: 100;
+        }
+
+        &:hover{
+          &::after{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .text{
+      font-size: $small-size;
+      font-weight: 200;
+      z-index: 100;
+      width: 70%;
+      
+      @media (max-width: $medium-width) {
+        width: 100%;
+      }
+      @media (max-width: $medium-width) {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: .2rem;
+        border-radius: .5rem;
+      }
+    }
+  }
+
+  >.bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    @media (max-width: $large-width) {
+      width: 65%;
+    }
+
+    @media (max-width: $large-width) {
+      width: 100%;
+    }
+    &::after{
+      content: '';
+      position: absolute; 
+      width: 60%;
+      height: 400%;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, var(--dark-color), transparent);
+      transform: rotate(25deg);
+      transform-origin: bottom left;
+      z-index: 2;
+      @media (max-width: $large-width) {
+        transform: rotate(35deg);
+      }
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 400%;
+      left: 1px;
+      bottom: 0;
+      background-color: var(--dark-color);
+      transform: scaleX(-1) rotate(-25deg);
+      transform-origin: bottom left;
+      z-index: 1;
+      @media (max-width: $large-width) {
+        transform: scaleX(-1) rotate(-35deg);
+      }
+    }
+    
+  }
+}
